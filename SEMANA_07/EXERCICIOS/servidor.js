@@ -22,11 +22,12 @@ router.get('/',function(req,res){
 
 router.post('/resultado', function(req,res){ 
     res.header("Access-Control-Allow-Origin", "*");
+    console.log(req.body)
     resultado = req.body
 });
 
-router.get('/esp', function(res){
-    res.send(resultado)
+router.get('/esp', function(req, res){
+    res.send(resultado);
 });
 
 // A estrutura é basicamente:
